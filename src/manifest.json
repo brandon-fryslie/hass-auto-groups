@@ -1,0 +1,9 @@
+{
+  "domain": "auto_group",
+  "name": "Auto Group",
+  "version": "0.1.0",
+  "requirements": [],
+  "documentation": "https://github.com/yourrepo/auto_group",
+  "dependencies": [],
+  "codeowners": ["@yourgithubusername"]
+}
