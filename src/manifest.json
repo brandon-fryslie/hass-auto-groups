@@ -1,9 +1,9 @@
 {
-  "domain": "auto_group",
-  "name": "Auto Group",
+  "domain": "auto_groups",
+  "name": "Auto Groups",
   "version": "0.1.0",
   "requirements": [],
-  "documentation": "https://github.com/yourrepo/auto_group",
+  "documentation": "https://github.com/brandon-fryslie/hass_auto_groups",
   "dependencies": [],
-  "codeowners": ["@yourgithubusername"]
+  "codeowners": ["@brandon-fryslie"]
 }

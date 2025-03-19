@@ -7,7 +7,7 @@ from homeassistant.helpers import entity_registry as er
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.discovery import async_load_platform
 
-DOMAIN = "auto_group"
+DOMAIN = "auto_groups"
 _LOGGER = logging.getLogger(__name__)
 
 CONF_GROUPS = "groups"
@@ -26,12 +26,12 @@ CONFIG_SCHEMA = vol.Schema({
 
 
 async def async_setup(hass, config):
-    """Set up the Auto Group component."""
+    """Set up the Auto Groups component."""
     conf = config.get(DOMAIN, {})
     groups_conf = conf.get(CONF_GROUPS, {})
 
     if not groups_conf:
-        _LOGGER.warning("No groups defined in auto_group config.")
+        _LOGGER.warning("No groups defined in auto_groups config.")
         return True
 
     entity_reg = er.async_get(hass)
@@ -46,7 +46,7 @@ async def async_setup(hass, config):
         matched_entities = _find_matching_entities(entity_reg, include)
 
         if not matched_entities:
-            _LOGGER.warning(f"No entities found matching for group: {group_id}")
+            _LOGGER.info(f"No entities found matching for group: {group_id}")
 
         # Create the group dynamically
         hass.services.call(
